@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Theme.Light.NoTitleBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.memo.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_blue"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新的备忘录"
+                style="@style/titleText"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:layout_centerHorizontal="true"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:id="@+id/titleText"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存"
+                android:layout_alignParentRight="true"
+                style="@style/titleActText"
+                android:layout_marginTop="3dp"
+                android:id="@+id/saveBtn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                style="@style/titleActText"
+                android:id="@+id/cancleBtn"
+                android:layout_alignBaseline="@+id/saveBtn"
+                android:layout_alignBottom="@+id/saveBtn"
+                android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:gravity="top"
+        android:hint="请在这写备忘内容......"
+        android:id="@+id/contentText"/>
+
+</RelativeLayout>
